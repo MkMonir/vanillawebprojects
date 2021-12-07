@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #ffefea;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 56px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: darksalmon;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 8px;
+  background-color: darksalmon;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-toggle {
+  display: block;
+  margin: 20px auto;
+}
+
+.text-box {
+  width: 70%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -800px);
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  transition: all 1s ease-in-out;
+}
+
+.text-box.show {
+  transform: translate(-50%, 0);
+}
+
+.text-box select {
+  background-color: darksalmon;
+  font-size: 12px;
+  height: 30px;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.text-box textarea {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.text-box h3 {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.text-box .btn {
+  width: 100%;
+}
+
+.close {
+  float: right;
+  text-align: end;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.box {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.box.active {
+  box-shadow: 0 0 10px 5px darksalmon;
+}
+
+.box img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.box .info {
+  background-color: darksalmon;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}

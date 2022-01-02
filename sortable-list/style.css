@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
+
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100vh;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  list-style: none;
+}
+
+.draggable-list li {
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+}
+
+.draggable-list li:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+  background-color: var(--background-color);
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+.person-name {
+  margin: 0 20px 0 0;
+  font-size: 16px;
+}
+
+.draggable-list li.right .person-name {
+  color: #3ae374;
+}
+
+.draggable-list li.wrong .person-name {
+  color: #ff3838;
+}
+
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+
+.draggable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.check-btn {
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}

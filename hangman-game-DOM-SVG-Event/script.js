@@ -8,7 +8,17 @@ const wordEl = document.getElementById('word'),
   finalMessage = document.getElementById('final-message'),
   figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['application', 'programming', 'javascript', 'developer'];
+const words = [
+  'application',
+  'programming',
+  'javascript',
+  'developer',
+  'sweety',
+  'titu',
+  'nasrin',
+  'lepe',
+  'shakil',
+];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 console.log(selectedWord);
